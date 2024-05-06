@@ -8,6 +8,49 @@
 5. If your frames reach the server it will send ACK signal to client
 6. Stop the Program
 ## PROGRAM
+
+client.py
+```
+import socket
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+size=int(input("Enter number of frames to send : "))
+l=list(range(size))
+s=int(input("Enter Window Size : "))
+st=0
+i=0
+while True:
+ while(i<len(l)):
+    st+=s
+    c.send(str(l[i:st]).encode())
+    ack=c.recv(1024).decode()
+    if ack:
+        print(ack)
+        i+=s
+```
+server.py
+```
+  import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+ print(s.recv(1024).decode())
+ s.send("acknowledgement recived from the server".encode())
+```
+
+
 ## OUPUT
+
+client.py
+
+![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/77139b71-8d8e-4929-97d3-087bcd6d63d0)
+
+Server :
+
+![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/d1d1a063-348a-423f-9120-8ae2bc42f4d9)
+
+
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed
