@@ -1,4 +1,6 @@
 # 2b IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
+Name: HEMANTH A
+Reg.NO: 212223220035
 ## AIM
 ## ALGORITHM:
 1. Start the program.
@@ -9,7 +11,7 @@
 6. Stop the Program
 ## PROGRAM
 
-client.py
+CLIENT :
 ```
 import socket
 s=socket.socket()
@@ -30,7 +32,7 @@ while True:
         print(ack)
         i+=s
 ```
-server.py
+SERVER :
 ```
   import socket
 s=socket.socket()
@@ -43,13 +45,15 @@ while True:
 
 ## OUPUT
 
-client.py
+CLIENT :
 
-![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/77139b71-8d8e-4929-97d3-087bcd6d63d0)
+![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/644ba130-7b1a-4982-bef6-f8194c75c95f)
 
-Server :
 
-![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/d1d1a063-348a-423f-9120-8ae2bc42f4d9)
+SERVER  :
+
+![image](https://github.com/Hemanthreddy0321/2b_SLIDING_WINDOW_PROTOCOL/assets/150005937/81aa6d8e-b674-4cdd-9d13-a75f169c9bf7)
+
 
 
 ## RESULT
